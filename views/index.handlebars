@@ -1,0 +1,16 @@
+{{#each results}}
+<div>
+
+  <button id="{{_id}}" class="saveBtn" data-saved="{{saved}}">Save Article</button>
+  <hr>
+
+
+  {{ title }}<br>
+  <a href="https://www.nytimes.com{{link}}" target="_blank">Link to article</a>
+  <br>
+  {{summary}}
+  <br>
+
+</div>
+
+{{/each}}
