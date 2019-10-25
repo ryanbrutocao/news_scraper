@@ -11,7 +11,7 @@ module.exports = function (app) {
 
   app.get("/saved", function (req, res) {
     db.Article.find({ saved: true }).then(function (results) {
-      res.render("index", { results: results });
+      res.render("saved", { results: results });
 
     });
   });

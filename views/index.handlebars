@@ -1,8 +1,20 @@
-{{#each results}}
-<div>
+<div class="container">
+  <img src="./coffee.jpg" alt="header image" id="imgHeader">
+  <div class="centered">
+    <h1>
+      Mongo Scraper
+    </h1>
+    <br>
+    <h5>New York Times Edition</h5>
+  </div>
+</div>
+<hr>
+
+
+
+{{#each results}} <div>
 
   <button id="{{_id}}" class="saveBtn" data-saved="{{saved}}">Save Article</button>
-  <hr>
 
 
   {{ title }}<br>
@@ -10,6 +22,7 @@
   <br>
   {{summary}}
   <br>
+  <hr>
 
 </div>
 

@@ -1,3 +1,30 @@
-{{#each results}}
-{{saved='false'}}
-{{/each}}
+<div class="container">
+  <img src="./coffee.jpg" alt="header image" id="imgHeader">
+  <div class="centered">
+    <h1>
+      Saved Articles
+    </h1>
+    <br>
+    <h5>Your Saved Articles</h5>
+  </div>
+</div>
+<hr>
+
+<div class="articlesHere">
+
+  {{#each results}} <div>
+
+    <button id="{{_id}}" class="deleteBtn" data-saved="{{saved}}">Delete Article</button>
+
+
+    {{ title }}<br>
+    <a href="https://www.nytimes.com{{link}}" target="_blank">Link to article</a>
+    <br>
+    {{summary}}
+    <br>
+    <hr>
+
+  </div>
+
+  {{/each}}
+</div>
