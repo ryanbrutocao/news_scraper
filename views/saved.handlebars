@@ -12,9 +12,12 @@
 
 <div class="articlesHere">
 
-  {{#each results}} <div>
+  {{#each results}}
+  <div>
 
-    <button id="{{_id}}" class="deleteBtn" data-saved="{{saved}}">Delete Article</button>
+    {{!-- <button data-id="{{_id}}" type="button" class="noteBtn" data-toggle="modal" data-target="#notes">Add a Note
+    </button> --}}
+    <button value="{{_id}}" class="deleteBtn" data-saved="{{saved}}">Delete Article</button>
 
 
     {{ title }}<br>
@@ -27,4 +30,31 @@
   </div>
 
   {{/each}}
+  {{!-- 
+  <div class="modal" tabindex="-1" role="dialog" id="notes">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add a Note</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            this should be in the modal body
+          </p>
+
+        </div>
+
+        <input type="text" placeholder="Enter Text Here" class="noteTxt">
+        <div class="modal-footer">
+          <button data-save="saveNote" class="saveNoteBtn" type="button"
+            class="btn btn-primary save-note but">Save</button>
+        </div>
+      </div>
+    </div>
+  </div> --}}
+
+
 </div>
